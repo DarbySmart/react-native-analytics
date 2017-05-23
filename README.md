@@ -41,6 +41,7 @@ Analytics.track("test track", {"name":"test track with name"})
 Analytics.screen("test screen", {"screenType":"SCREEN NAME"})
 Analytics.flush()
 Analytics.reset()
+Analytics.anonymousId(callback) // android only
 ```
 
 ## Documentation
