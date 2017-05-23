@@ -26,7 +26,7 @@ export default {
      * @param shouldUseLocationServices https://segment.com/docs/libraries/ios/#location-services
      */
     setup: function (configKey: string, flushAt: number = 20, shouldUseLocationServices: bool = false) {
-        return NativeRNSegmentIOAnalytics.setup(configKey, flushAt, shouldUseLocationServices)
+        NativeRNSegmentIOAnalytics.setup(configKey, flushAt, shouldUseLocationServices)
     },
 
     /*
