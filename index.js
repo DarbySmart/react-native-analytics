@@ -92,4 +92,11 @@ export default {
     enable: function () {
         NativeRNSegmentIOAnalytics.enable()
     },
+
+    /*
+     https://segment.com/docs/sources/mobile/android/#anonymousid
+     */
+    anonymousId: function () {
+        return NativeRNSegmentIOAnalytics.anonymousId()
+    },
 }

@@ -106,8 +106,8 @@ public class RNSegmentIOAnalyticsModule extends ReactContextBaseJavaModule {
    https://segment.com/docs/sources/mobile/android/#anonymousid
    */
   @ReactMethod
-  public void anonymousId() {
-    mAnalytics.with(getCurrentActivity()).getAnalyticsContext().traits().anonymousId();
+  public String anonymousId() {
+    return mAnalytics.with(getCurrentActivity()).getAnalyticsContext().traits().anonymousId();
   }
 
   /*
