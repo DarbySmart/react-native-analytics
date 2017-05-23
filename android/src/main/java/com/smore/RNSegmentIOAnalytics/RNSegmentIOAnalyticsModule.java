@@ -5,6 +5,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableMapKeySetIterator;
+import com.facebook.react.bridge.Callback;
 
 import com.facebook.react.bridge.ReadableType;
 import com.segment.analytics.Analytics;
@@ -105,10 +106,10 @@ public class RNSegmentIOAnalyticsModule extends ReactContextBaseJavaModule {
   /*
    https://segment.com/docs/sources/mobile/android/#anonymousid
    */
-  @ReactMethod
-  public String anonymousId() {
-    return mAnalytics.with(getCurrentActivity()).getAnalyticsContext().traits().anonymousId();
-  }
+   @ReactMethod
+   public void anonymousId(Callback callback) {
+     callback.invoke(mAnalytics.getAnalyticsContext().traits().anonymousId());
+   }
 
   /*
    https://segment.com/docs/libraries/android/#logging

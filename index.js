@@ -96,7 +96,7 @@ export default {
     /*
      https://segment.com/docs/sources/mobile/android/#anonymousid
      */
-    anonymousId: function () {
-        return NativeRNSegmentIOAnalytics.anonymousId()
-    },
+     anonymousId: function (callback) {
+         NativeRNSegmentIOAnalytics.anonymousId(callback)
+     },
 }
