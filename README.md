@@ -1,3 +1,15 @@
+# Darby
+
+Added method
+```javascript
+// android only
+Analytics.anonymousId(anonymousIdCallback)
+
+function anonymousIdCallback(anonId) {
+  console.log(anonId)
+}
+```
+
 # React Native Analytics
 
 Written by Tal Kain <tal@kain.net>, Tony Xiao <tonyx.ca@gmail.com> and other contributors.
